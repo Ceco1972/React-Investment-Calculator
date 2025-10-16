@@ -5,10 +5,10 @@ import { useState } from "react"
 
 function App() {
   const [investObject, setInvestObject] = useState({
-    initialInvestment: 10000, 
-    annualInvestment: 1000, 
-    expectedReturn: 7, 
-    duration: 8 
+    initialInvestment: '', 
+    annualInvestment: '', 
+    expectedReturn: '', 
+    duration: ''
   });
 
   const handleInputChange = (identifier, value) => {
