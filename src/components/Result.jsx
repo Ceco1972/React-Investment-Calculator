@@ -1,4 +1,5 @@
 import { calculateInvestmentResults } from "../util/investment";
+import { formatter } from "../util/investment";
 
 export default function Result({ investData }) {
   const results = calculateInvestmentResults({
@@ -31,10 +32,10 @@ export default function Result({ investData }) {
           return (
             <tr key={data.year}>
               <td>{data.year}</td>
-              <td>{data.valueEndOfYear.toFixed(2)}</td>
-              <td>{data.interest.toFixed(2)}</td>
-              <td>{totalInterest.toFixed(2)}</td>
-              <td>{investedCapital.toFixed(2)}</td>
+              <td>{formatter.format(data.valueEndOfYear.toFixed(2)) }</td>
+              <td>{formatter.format(data.interest.toFixed(2))}</td>
+              <td>{formatter.format(totalInterest.toFixed(2))}</td>
+              <td>{formatter.format(investedCapital.toFixed(2))}</td>
             </tr>
           );
         })}
