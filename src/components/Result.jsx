@@ -2,12 +2,7 @@ import { calculateInvestmentResults } from "../util/investment";
 import { formatter } from "../util/investment";
 
 export default function Result({ investData }) {
-  const results = calculateInvestmentResults({
-    initialInvestment: investData.initialInvestment,
-    annualInvestment: investData.annualInvestment,
-    expectedReturn: investData.expectedReturn / 100,
-    duration: investData.duration
-  });
+  const results = calculateInvestmentResults(investData);
 
   let totalInterest = 0;
 
